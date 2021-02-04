@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools list</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style ="background-color: #e5989b;">
+        <!-- Brand icon  -->
+        <a class="navbar-brand" href="Home">INVENTORY</a>
+            <!-- Hamberger icon to see the menu when scale down the page  -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="expandme">
+            <!-- Nav lists  -->
+            <div class="navbar-nav">
+                <a href="Home" class="nav-item nav-link">Home</a>
+                <a href="ToolsBootstrap.html" class="nav-item nav-link">All Tools</a>
+                <a href="Admin" class="nav-item nav-link">Admin</a>
+            </div>
+            <!-- Nav account  -->
+            <form class="navbar-nav ml-auto">
+                <img src=" profilesample.jfif" class="nav-item border border-white rounded-circle" width=30px alt="your profile picture">
+                <a href="/account" class="nav-item nav-link">Firstname Lastname</a>
+            </form>
+        </div>
+    </nav>
+    <!-- From create tools list  -->
+    <div class ="container">
+        <h1 class = "display-6 text-center fw-light">Create new tool here!</h1>
+        <form action="ToolsBootstrap.html">
+            <div class="form-row">
+                <!-- Email input  -->
+                <div class="form-group col-md-9">
+                    <label for="tool">Name</label>
+                    <!-- from control in input is important  -->
+                    <input type="text" class="form-control" id="tool" placeholder="Tools name">
+                </div>
+                <!-- password input   -->
+                <div class="form-group col-md-3">
+                    <label for="number">Number</label>
+                    <input type="number" class="form-control" id="number" placeholder="number of tools">
+                </div>
+            </div>
+            <div class ="form-row">
+                <div class = "form-group col-md-6">
+                    <label for="category">Category</label>
+                    <select class="form-control" name ="category" id="category">
+                        <option selcted>Choose...</option>
+                        <option value="CL">Chemical substance</option>
+                        <option value="GW">Glassware</option>
+                        <option value="MM">Measurement tool</option>
+                        <option value="RC">Reactor</option>
+                        <option value="OT">Others</option>
+                    </select>
+                </div>
+                <div class = "form-group col-md-6">
+                    <label for="date">Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div> 
+            </div>
+            <button type="submit" class = "btn btn-success">Create</button>
+        </form>
+    </div>
+    <!-- Table  -->
+    <div class = "container-md mt-4">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Item</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Volumetric Pipets</td>
+                <td>12</td>
+                <td>Measurement tool</td>
+                <td>28/01/2021</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Beaker 500 ml</td>
+                <td>25</td>
+                <td>Glassware</td>
+                <td>25/01/2021</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Hidrogen peroxide 1L</td>
+                <td>2</td>
+                <td>Chemical substance</td>
+                <td>01/12/2020</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class ="container d-grid gap-3 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-primary me-5">previous</button>
+        <button type="button" class="btn btn-primary">next</button>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
